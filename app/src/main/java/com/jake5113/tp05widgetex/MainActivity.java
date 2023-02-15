@@ -9,23 +9,17 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.jake5113.tp05widgetex.databinding.ActivityMainBinding;
-import com.jake5113.tp05widgetex.databinding.PopupBinding;
 
 public class MainActivity extends AppCompatActivity {
-    private ActivityMainBinding binding;
-    private PopupBinding bind;
 
     ImageView iconOverView, iconLike, iconMsg, iconSend, iconBookmark, iconImg;
-//    ImageView changeImg;
+    ImageView changeImg;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //setContentView(R.layout.activity_main);
-        binding = ActivityMainBinding.inflate(getLayoutInflater());
-        bind = PopupBinding.inflate(getLayoutInflater());
-        setContentView(binding.getRoot());
+        setContentView(R.layout.activity_main);
+
 
         iconOverView = findViewById(R.id.icon_overview);
         iconLike = findViewById(R.id.icon_like);
@@ -39,14 +33,15 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
                 AlertDialog popup = builder.create();
-                builder.setView(R.layout.popup).show();
-//                changeImg = popup.findViewById(R.id.change_img);
+                builder.setView(R.layout.popup);
+                popup = builder.create();
+                popup.show();
+                changeImg = popup.findViewById(R.id.change_img);
                 //TODO 이미지 클릭시 사진 넘어가는 것 하기
-                 bind.changeImg.setOnClickListener(new View.OnClickListener() {
+                changeImg.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(MainActivity.this, "Hello", Toast.LENGTH_SHORT).show();
-                        bind.changeImg.setImageResource(R.drawable.sydney);
+                        changeImg.setImageResource(R.drawable.sydney);
                     }
                 });
             }
