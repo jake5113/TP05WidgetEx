@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
 
     ImageView iconOverView, iconLike, iconMsg, iconSend, iconBookmark, iconImg;
     ImageView changeImg;
+    int bookMarkCount = 0, likeCount = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,8 +57,10 @@ public class MainActivity extends AppCompatActivity {
         iconLike.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "like", Toast.LENGTH_SHORT).show();
-                iconLike.setImageResource(R.drawable.baseline_favorite_24);
+                if (likeCount % 2 == 0) iconLike.setImageResource(R.drawable.baseline_favorite_24);
+                else iconLike.setImageResource(R.drawable.baseline_favorite_border_24);
+                likeCount++;
+
             }
         });
         iconMsg.setOnClickListener(new View.OnClickListener() {
@@ -75,9 +78,9 @@ public class MainActivity extends AppCompatActivity {
         iconBookmark.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "북마크!", Toast.LENGTH_SHORT).show();
-                iconBookmark.setImageResource(R.drawable.baseline_bookmark_24);
-                //TODO 다시 바뀌는거 적용해보자
+                if (bookMarkCount % 2 == 0) iconBookmark.setImageResource(R.drawable.baseline_bookmark_24);
+                else iconBookmark.setImageResource(R.drawable.baseline_bookmark_border_24);
+                bookMarkCount++;
             }
         });
 

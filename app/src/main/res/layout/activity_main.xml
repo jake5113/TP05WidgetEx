@@ -50,14 +50,15 @@
 
     </GridLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
 
-        <HorizontalScrollView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scrollbars="none">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:layout_width="52dp"
@@ -66,8 +67,107 @@
                 app:civ_border_color="@color/white"
                 app:civ_border_width="2dp" />
 
-        </HorizontalScrollView>
-    </LinearLayout>
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:src="@drawable/moana02"
+                app:civ_border_color="@color/white"
+                app:civ_border_width="2dp" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:src="@drawable/moana03"
+                app:civ_border_color="@color/white"
+                app:civ_border_width="2dp" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:src="@drawable/moana04"
+                app:civ_border_color="@color/white"
+                app:civ_border_width="2dp" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:src="@drawable/moana05"
+                app:civ_border_color="@color/white"
+                app:civ_border_width="2dp" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:src="@drawable/moana01"
+                app:civ_border_color="@color/white"
+                app:civ_border_width="2dp" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:src="@drawable/moana02"
+                app:civ_border_color="@color/white"
+                app:civ_border_width="2dp" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:src="@drawable/moana03"
+                app:civ_border_color="@color/white"
+                app:civ_border_width="2dp" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:src="@drawable/moana04"
+                app:civ_border_color="@color/white"
+                app:civ_border_width="2dp" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:src="@drawable/moana05"
+                app:civ_border_color="@color/white"
+                app:civ_border_width="2dp" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:src="@drawable/moana01"
+                app:civ_border_color="@color/white"
+                app:civ_border_width="2dp" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:src="@drawable/moana02"
+                app:civ_border_color="@color/white"
+                app:civ_border_width="2dp" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:src="@drawable/moana03"
+                app:civ_border_color="@color/white"
+                app:civ_border_width="2dp" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:src="@drawable/moana04"
+                app:civ_border_color="@color/white"
+                app:civ_border_width="2dp" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:src="@drawable/moana05"
+                app:civ_border_color="@color/white"
+                app:civ_border_width="2dp" />
+
+
+        </LinearLayout>
+    </HorizontalScrollView>
 
     <LinearLayout
         android:layout_width="match_parent"
