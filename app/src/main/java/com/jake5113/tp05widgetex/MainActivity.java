@@ -14,7 +14,8 @@ public class MainActivity extends AppCompatActivity {
 
     ImageView iconOverView, iconLike, iconMsg, iconSend, iconBookmark, iconImg;
     ImageView changeImg;
-    int bookMarkCount = 0, likeCount = 0;
+    int bookMarkCount = 0;
+    boolean likeCount = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,10 +58,9 @@ public class MainActivity extends AppCompatActivity {
         iconLike.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (likeCount % 2 == 0) iconLike.setImageResource(R.drawable.baseline_favorite_24);
+                if (likeCount) iconLike.setImageResource(R.drawable.baseline_favorite_24);
                 else iconLike.setImageResource(R.drawable.baseline_favorite_border_24);
-                likeCount++;
-
+                likeCount = !likeCount;
             }
         });
         iconMsg.setOnClickListener(new View.OnClickListener() {
@@ -78,7 +78,8 @@ public class MainActivity extends AppCompatActivity {
         iconBookmark.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (bookMarkCount % 2 == 0) iconBookmark.setImageResource(R.drawable.baseline_bookmark_24);
+                if (bookMarkCount % 2 == 0)
+                    iconBookmark.setImageResource(R.drawable.baseline_bookmark_24);
                 else iconBookmark.setImageResource(R.drawable.baseline_bookmark_border_24);
                 bookMarkCount++;
             }
